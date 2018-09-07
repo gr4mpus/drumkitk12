@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drum Kit</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="container">  
+        <div>
+            A <br>
+            <span>Boom</span>
+        </div>
+        <div>S <br>
+            <span>Clap</span>
+        </div>
+        <div>D <br>
+            <span>Hihat</span>
+        </div>
+        <div>F <br>
+            <span>Kick</span>
+        </div>
+        <div>G <br>
+            <span>OpHat</span>
+        </div>
+        <div>H <br>
+            <span>Ride</span>
+        </div>
+        <div>J <br>
+            <span>Snare</span>
+        </div>
+        <div>K <br>
+            <span>Tink</span>
+        </div>
+        <div>L <br>
+            <span>Tom</span>
+        </div>
+    </div> 
+
+    <audio id="a" src="./boom.wav"></audio>
+    <audio id="s"  src="./clap.wav"></audio>
+    <audio id="d" src="./hihat.wav"></audio>
+    <audio id="f" src="./kick.wav"></audio>
+    <audio id="g" src="./openhat.wav"></audio>
+    <audio id="h" src="./ride.wav"></audio>
+    <audio id="j" src="./snare.wav"></audio>
+    <audio id="k" src="./tink.wav"></audio>
+    <audio id="l" src="./tom.wav"></audio>
+    <script>
+  window.onkeydown=function(e){
+    // console.log(e);
+    // console.log(e.key);
+    var audio = document.getElementById(`${e.key}`);
+    // console.log(audio.attributes[0]);
+    if(audio==null){
+        return;
+    }
+    audio.currentTime = 0;
+    audio.play();
+}
+
+    </script>
+</body>
+</html>
